@@ -1,0 +1,7 @@
+[
+  {"id":"codexbar","name":"CodexBar","repo":"steipete/CodexBar","description":"Track Codex and Claude Code usage without leaving your desktop.","contribution":"Preserved dotfiles-managed config links and fixed Linux/Omarchy quota reporting.","evidence":[3784,3785]},
+  {"id":"vscodevim","name":"VSCodeVim","repo":"VSCodeVim/Vim","description":"Vim's modal editing and keyboard navigation, inside VS Code.","contribution":"Added jump-to-anywhere navigation to easymotion.","evidence":[]},
+  {"id":"raycast","name":"Raycast Extensions","repo":"raycast/extensions","description":"Bring apps, commands, and everyday workflows into Raycast.","contribution":"Added Safari new-window and private-window commands.","evidence":[]},
+  {"id":"flowbite","name":"Flowbite Svelte","repo":"themesberg/flowbite-svelte","description":"Ready-to-use Svelte components built on Flowbite and Tailwind CSS.","contribution":"Fixed carousel swipes and added the disableSwipe option.","evidence":[]},
+  {"id":"edgevec","name":"Edgevec","repo":"matte1782/edgevec","description":"Fast vector search for browsers, Node.js, and edge applications.","contribution":"Contributed WASM SIMD128 Hamming distance and binary vector storage.","evidence":[]}
+]

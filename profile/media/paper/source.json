@@ -1,0 +1,82 @@
+{
+  "source_url": "https://getpaper.sh/",
+  "captured_at": "2026-10-03T05:05:34.669197+00:00",
+  "kind": "animated website illustration, not an application screen recording",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "t_range": [
+    9.8,
+    10.9
+  ],
+  "frames_forward": 32,
+  "edit": "Disabled scroll snapping only to sample the existing scroll animation. Cropped each desktop pane at its true top edge, then added 14 px of clean padding above it and project labels. No adjacent page text is included. Loop returns through the same frames.",
+  "capture_mode": "live-public-page",
+  "top_breathing_room_px": 14,
+  "top_breathing_room_mode": "synthetic-after-crop",
+  "homepage_status": 200,
+  "source_html_sha256": "1a004244a94e138f6e9e65116fe4869d6dc37bbfd7bb2af9d658952de3dd0742",
+  "source_repo_url": "https://raw.githubusercontent.com/getpapersh/getpaper.sh/main/index.html",
+  "source_repo_sha256": "cd15c9010c479a03db6dbe70f39631d8ee91099d38f3b795e95a9edec6342167",
+  "live_matches_repo_bytes": false,
+  "capture_structure": {
+    "story": 1,
+    "stage": 1,
+    "desktops": 2,
+    "minimaps": 2
+  },
+  "assets": {
+    "papermac-preview.gif": {
+      "sha256": "0aa196af585f61198bee10848c85bcc909e98cc18b738172d5707003fde87cbd",
+      "bytes": 660716,
+      "width": 640,
+      "height": 550,
+      "frames": 54
+    },
+    "papermac-preview.png": {
+      "sha256": "11c3bf4467bf4aee1df24eb86accfad56368f0d4da0a236ed475998e12f4278b",
+      "bytes": 100344,
+      "width": 640,
+      "height": 550,
+      "frames": 1
+    },
+    "paperland-preview.gif": {
+      "sha256": "018eef2ca1ecba37072bcb2c29aea9106a89fb75e9a95b9432ece9a4e2f0e225",
+      "bytes": 642538,
+      "width": 640,
+      "height": 550,
+      "frames": 39
+    },
+    "paperland-preview.png": {
+      "sha256": "07237b99c53a48e1a3a1590f9de1ff7a92820bf3e459bb5d58707677a005fee1",
+      "bytes": 56061,
+      "width": 640,
+      "height": 550,
+      "frames": 1
+    }
+  },
+  "installer": {
+    "url": "https://getpaper.sh/install",
+    "status": 200,
+    "sha256": "c9286ec1fec323fe6c1b55f72de4ab93110948d9ff1de0072dd09603e97dd9e2",
+    "content_type": "text/plain; charset=utf-8"
+  },
+  "mac_manifest": {
+    "url": "https://dl.getpaper.sh/papermac/latest.json",
+    "status": 200,
+    "sha256": "b16cf8b3ee5245bc7dbabda4717164c84da42095d4cffe9200db61f2acc56d4c",
+    "content_type": "application/json",
+    "version": "27.0.0-alpha.5",
+    "min_macos": "27",
+    "notarized": true
+  },
+  "mac_download": {
+    "url": "https://dl.getpaper.sh/papermac/PaperMac-27.0.0-alpha.5.dmg",
+    "status": 200
+  },
+  "linux_source": {
+    "url": "https://github.com/getpapersh/paperland",
+    "public": true
+  }
+}

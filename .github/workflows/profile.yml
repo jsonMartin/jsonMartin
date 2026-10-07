@@ -1,0 +1,62 @@
+name: Refresh public profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - contributions.yml
+      - .github/scripts/**
+      - .github/workflows/profile.yml
+      - profile/contributions/featured.json
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-public-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'jsonMartin/jsonMartin'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 24
+      - name: Validate reviewed contribution list and update cards
+        env:
+          PROFILE_USER: jsonMartin
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          node .github/scripts/contributions.mjs --check
+          node .github/scripts/contributions.mjs
+          node .github/scripts/render-contribution-cards.mjs --refresh 2>&1 | tee /tmp/contribution-refresh.log
+          ! grep -q 'Keeping dated snapshot' /tmp/contribution-refresh.log
+          node .github/scripts/render-also-built.mjs --refresh 2>&1 | tee /tmp/also-built-refresh.log
+          ! grep -q 'Keeping Also Built snapshot' /tmp/also-built-refresh.log
+          node --test .github/scripts/render-contribution-cards.test.mjs .github/scripts/render-also-built.test.mjs
+          node --input-type=module <<'JS'
+          import {readFileSync} from 'node:fs';
+          const expected=new Date().toISOString().slice(0,10);
+          for(const p of ['profile/contributions/metadata.json','profile/also-built/metadata.json']){
+            const data=JSON.parse(readFileSync(p,'utf8'));
+            if(data.as_of!==expected) throw Error('Stale '+p);
+          }
+          JS
+      - name: Commit generated public metadata and cards
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md profile/contributions/metadata.json profile/contributions/compact/ profile/also-built/metadata.json profile/visual/portfolio/readwise-mirror.svg profile/visual/portfolio/astronot.svg
+          git diff --cached --quiet && exit 0
+          git commit -m 'chore(profile): refresh public contributions'
+          git push

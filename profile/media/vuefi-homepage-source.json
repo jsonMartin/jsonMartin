@@ -1,0 +1,16 @@
+{
+  "source": "https://vuefi.com/",
+  "final_url": "https://vuefi.com/",
+  "captured_at": "2026-10-02T22:35:37.351829+00:00",
+  "viewport": {
+    "width": 1440,
+    "height": 850
+  },
+  "method": "Playwright Chromium, public page, no login",
+  "content_editing": "None; viewport and section crops only",
+  "deployment": null,
+  "files": {
+    "vuefi-homepage-product.png": "3c6630aa5aa1b911e5e89d521a36a59492cbc5b3e0dede6ad55e090a9df2d9a4",
+    "vuefi-homepage.png": "d648f0c3572fcc61e58d959c04f112642e35c61dbc1d06287be5a8eada0973f1"
+  }
+}

@@ -1,0 +1,62 @@
+# Reviewed public contribution allowlist, not an inventory of all repositories.
+# The five featured cards in README.md are intentionally hand-curated.
+options:
+  autodiscover: false
+  new_repos_included: false
+  only_described: true
+  exclude_owners: jsonMartin, VueFi, getpapersh
+  include_by_default: false
+  layout: table
+  sort: stars
+  show_pr_count: false
+  show_date: false
+  limit: 20
+  min_stars: 0
+  exclude_pattern: ""
+  since: "2017-01-01"
+  until: ""
+
+repos:
+  - repo: steipete/CodexBar
+    include: true
+    description: Contributed Linux/Omarchy installer and provider-specific quota fixes
+  - repo: VSCodeVim/Vim
+    include: true
+    description: Added the `jumptoanywhere` command for easymotion
+  - repo: raycast/extensions
+    include: true
+    description: Safari New Window and New Private Window commands
+  - repo: themesberg/flowbite-svelte
+    include: true
+    description: Carousel swipe fixes and the `disableSwipe` prop
+  - repo: matte1782/edgevec
+    include: true
+    description: WASM SIMD128 Hamming distance and binary vector storage
+  # Reviewed October 2: https://github.com/crmne/omastats/pull/11 and /pull/13, both merged.
+  - repo: crmne/omastats
+    include: true
+    description: Added configurable utilization colors and GPU memory history charts
+  - repo: transitive-bullshit/nextjs-notion-starter-kit
+    include: true
+    description: Fixed inline code rendering on light and dark themes
+  - repo: mrjackphil/obsidian-jump-to-link
+    include: true
+    description: Added JumpToAnywhere regex-based editor navigation
+  - repo: iurysza/herdr-tab-smart-rename
+    include: true
+    description: Fixed token limit handling for Luna
+  - repo: emilgoldsmith/stylelint-custom-processor-loader
+    include: true
+    description: Surfaced stylelint warnings in Webpack output
+  - repo: public-apis/public-apis
+    include: true
+    description: "Documentation: renamed API.AI to Dialogflow across the directory"
+  - repo: ionic-team/ionic-docs
+    include: true
+    description: "Documentation: fixed outdated `ion-col` syntax in the grid documentation"
+  - repo: iboldurev/dialogflow
+    include: true
+    description: "Documentation: renamed API.AI to Dialogflow"
+  - repo: xVir/apiai-python-webhook
+    include: true
+    description: "Documentation: renamed API.AI to Dialogflow"
