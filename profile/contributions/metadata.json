@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-09",
+  "as_of": "2026-10-10",
   "repositories": {
     "steipete/CodexBar": {
-      "stars": 22325,
+      "stars": 22353,
       "language": "Swift"
     },
     "VSCodeVim/Vim": {
@@ -10,11 +10,11 @@
       "language": "TypeScript"
     },
     "raycast/extensions": {
-      "stars": 7774,
+      "stars": 7777,
       "language": "TypeScript"
     },
     "themesberg/flowbite-svelte": {
-      "stars": 2786,
+      "stars": 2787,
       "language": "CSS"
     },
     "matte1782/edgevec": {
