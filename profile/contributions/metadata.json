@@ -1,12 +1,12 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "repositories": {
     "steipete/CodexBar": {
-      "stars": 23055,
+      "stars": 23063,
       "language": "Swift"
     },
     "VSCodeVim/Vim": {
-      "stars": 15227,
+      "stars": 15228,
       "language": "TypeScript"
     },
     "raycast/extensions": {
